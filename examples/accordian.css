@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 62.5%;
+}
+
+.btn {
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  margin: 4rem;
+  font-size: 2rem;
+  border: 0;
+  transition: opacity 0.3s;
+}
+
+.btn--primary {
+  background-color: dodgerblue;
+  color: #f3eded;
+}
+
+.btn--secondary {
+  background-color: rgb(94, 203, 203);
+  color: #181818;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.87;
+}
+
+.accordian {
+  margin: 2rem;
+  max-width: 350px;
+  border: 0;
+  border-top: 10px solid rgb(44, 126, 220);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 24px 3px rgb(220, 220, 220);
+  background: rgb(20, 12, 71);
+  color: #ccc;
+}
+
+.accordian__header {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.accordian__heading {
+  font-size: 2.3rem;
+}
+.accordian__content {
+  font-size: 2rem;
+  line-height: 1.4;
+  border: 0;
+  padding: 1rem;
+}
+
+.collapsible .accordian__content {
+  display: none;
+}
+.icon {
+  order: 2;
+  max-width: 36px;
+  max-height: 36px;
+  border: 1px solid #9b9898;
+  border-radius: 100%;
+  vertical-align: middle;
+  background: rgb(195, 203, 211);
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.collapsible--expanded .accordian__content {
+  display: block;
+}
+
+.collapsible--expanded .icon {
+  transform: rotate(90deg);
+}
+.btn--toggler {
+  border: 0;
+  border-radius: 100%;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+@media screen and (min-width: 700px) {
+  .accordian__content {
+    font-size: 1.8rem;
+  }
+
+  .accordian__heading {
+    font-size: 2.1rem;
+  }
+}

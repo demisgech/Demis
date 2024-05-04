@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  border: 0;
+  display: grid;
+  grid-template: 100px auto 100px / 30fr 70fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 4px;
+  height: 80vh;
+}
+
+.box {
+  border-radius: 10px;
+  background: dodgerblue;
+}
+
+.box-one {
+  grid-area: header;
+}
+
+.box-two {
+  background: darkcyan;
+  grid-area: main;
+}
+
+.box-three {
+  background: gold;
+}
+.box-four {
+  background: darkmagenta;
+  grid-area: footer;
+}

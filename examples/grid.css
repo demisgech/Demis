@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 60px auto 100px;
+  grid-template-columns: 100px auto 100px;
+  grid-template-areas:
+    "header  header header"
+    "leftSidebar main   rightSidebar"
+    "footer  footer footer";
+  height: 100vh;
+  gap: 1rem;
+}
+.box {
+  font-size: 2rem;
+}
+
+.box-one {
+  background-color: dodgerblue;
+  grid-area: header;
+}
+
+.box-two {
+  grid-area: leftSidebar;
+  background-color: green;
+  border-radius: 0 5px 5px 0;
+}
+
+.box-three {
+  background-color: goldenrod;
+  grid-area: main;
+  border-radius: 10px;
+}
+
+.box-four {
+  grid-area: rightSidebar;
+  background-color: darkcyan;
+  border-radius: 5px 0 0 5px;
+}
+
+.box-five {
+  background-color: indianred;
+  grid-area: footer;
+}

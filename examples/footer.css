@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.footer {
+  background: rgb(5, 3, 18);
+  color: #ccc;
+  padding: 2rem;
+}
+
+.container {
+  padding: 1rem 3rem;
+  border-top: 1px solid #444;
+  margin-bottom: 0.4rem;
+}
+
+.footer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  margin: 0;
+}
+
+h2 {
+  letter-spacing: -1px;
+  font-size: 2.5rem;
+  word-spacing: -2px;
+  transition: opacity 0.3s;
+}
+
+h2:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+img {
+  width: 36px;
+  height: 36px;
+  background: #716e6e;
+  border: 0;
+  border-radius: 100%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+img:hover {
+  background: #ccc;
+  box-shadow: 0 0 10px 4px rgb(128, 154, 180);
+}
+
+.btn {
+  border: 0;
+  border-radius: 100%;
+}
+
+.collapsible .btn--toggler {
+  transform: rotate(-90deg);
+}
+
+.list {
+  list-style: none;
+}
+
+.collapsible .footer__item {
+  display: none;
+}
+
+.footer__item {
+  letter-spacing: -1px;
+  line-height: 1.5;
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+  padding: 0 2rem;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.footer__item:hover {
+  transform: translateX(10px);
+  animation: ease-in-out;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.collapsible--expanded .footer__item {
+  display: block;
+}
+
+.collapsible--expanded .btn--toggler {
+  transform: rotate(180deg);
+}
+
+.footer__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__sections {
+  border: 0;
+  margin-bottom: 0;
+  background: rgb(5, 3, 18);
+  border-top: 1px solid #444;
+  color: #ccc;
+}
+.footer__section img {
+  background: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.footer__section p {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .grid--auto {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .container {
+    border: 0;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+  .footer__item {
+    font-size: 1.8rem;
+  }
+
+  .collapsible .footer__item {
+    display: block;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .footer__sections {
+    border-top: 1px solid #444;
+  }
+}
